@@ -1,1 +1,1 @@
-# google-code-jam-2018
+# codejam
