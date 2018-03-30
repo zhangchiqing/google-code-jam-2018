@@ -6,7 +6,7 @@ import Test.Tasty
 import Test.Tasty.HUnit
 
 main :: IO ()
-main = run "/Users/leo/Downloads/A-large-practice (1).in"
+main = run "/Users/leo/Downloads/A-large-practice.in"
 
 run :: FilePath -> IO ()
 run filePath = do

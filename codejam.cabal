@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 7973dca80bf3f402b6e79b891ba83105c39d4490a0f86830703dbb4aa998aa20
+-- hash: 979976a4c9d81a05ca712882e9ff996f95742504c06c36d76e912ece8888b4e4
 
 name:           codejam
 version:        0.1.0.0
@@ -31,12 +31,12 @@ library
   default-extensions: OverloadedStrings QuasiQuotes
   build-depends:
       base >=4.7 && <5
+    , containers
     , split
     , tasty
     , tasty-hunit
   exposed-modules:
       GCJ2017QA
-      GCJ2017QB
       Lib
   other-modules:
       Paths_codejam
@@ -51,6 +51,7 @@ executable codejam-exe
   build-depends:
       base >=4.7 && <5
     , codejam
+    , containers
     , split
     , tasty
     , tasty-hunit
@@ -68,6 +69,7 @@ test-suite codejam-test
   build-depends:
       base >=4.7 && <5
     , codejam
+    , containers
     , split
     , tasty
     , tasty-hunit
