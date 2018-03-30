@@ -1,2 +1,4 @@
+import qualified Test.GCJ2017QA as T
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = T.main
