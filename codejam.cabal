@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 979976a4c9d81a05ca712882e9ff996f95742504c06c36d76e912ece8888b4e4
+-- hash: 2c52728452e5ab38d368086b7bf6cf697669857e20a71f8b06af1f8817f1fe2c
 
 name:           codejam
 version:        0.1.0.0
@@ -35,8 +35,11 @@ library
     , split
     , tasty
     , tasty-hunit
+    , vector
   exposed-modules:
       GCJ2017QA
+      GCJ2017QB
+      GCJ2017QC
       Lib
   other-modules:
       Paths_codejam
@@ -55,6 +58,7 @@ executable codejam-exe
     , split
     , tasty
     , tasty-hunit
+    , vector
   other-modules:
       Paths_codejam
   default-language: Haskell2010
@@ -73,6 +77,7 @@ test-suite codejam-test
     , split
     , tasty
     , tasty-hunit
+    , vector
   other-modules:
       Paths_codejam
   default-language: Haskell2010
