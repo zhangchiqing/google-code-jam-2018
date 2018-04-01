@@ -23,6 +23,6 @@ ghci> defaultMain tests
 Edit Lib.hs
 
 ```
-stack build; stack exec codejam-exe > ~/Downloads/output
+stack build; stack exec codejam-exe < ~/Downloads/A-small-practice.in > ~/Downloads/output
 ```
 

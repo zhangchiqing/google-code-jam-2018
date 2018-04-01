@@ -7,15 +7,10 @@ import Test.Tasty
 import Test.Tasty.HUnit
 
 main :: IO ()
-main = run "/Users/leo/Downloads/B-large-practice.in"
+main = interact runFile
 
-run :: FilePath -> IO ()
-run filePath = do
-  file <- readFile filePath
-  traverse_ putStrLn $ runFile file
-
-runFile :: String -> [String]
-runFile file = runCase <$> cases
+runFile :: String -> String
+runFile file = unlines $ runCase <$> cases
   where
     cases = zip [1 ..] $ drop 1 $ lines file
 

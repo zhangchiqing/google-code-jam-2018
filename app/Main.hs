@@ -1,6 +1,6 @@
 module Main where
 
-import Lib
+import qualified GCJ2017QA as Q
 
 main :: IO ()
-main = run
+main = Q.main

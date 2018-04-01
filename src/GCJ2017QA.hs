@@ -6,15 +6,10 @@ import Test.Tasty
 import Test.Tasty.HUnit
 
 main :: IO ()
-main = run "/Users/leo/Downloads/A-large-practice.in"
+main = interact runFile
 
-run :: FilePath -> IO ()
-run filePath = do
-  file <- readFile filePath
-  traverse_ putStrLn $ runFile file
-
-runFile :: String -> [String]
-runFile file = runCase <$> cases
+runFile :: String -> String
+runFile file = unlines $ runCase <$> cases
   where
     cases = zip [1 ..] $ drop 1 $ lines file
 
@@ -56,5 +51,5 @@ tests =
     , testCase "sample" $ do
         input <- readFile "./cases/2017QA/in"
         otput <- readFile "./cases/2017QA/out"
-        runFile input @?= lines otput
+        runFile input @?= otput
     ]
