@@ -45,5 +45,5 @@ tests =
     , testCase "sample" $ do
         input <- readFile "./cases/2017QB/in"
         otput <- readFile "./cases/2017QB/out"
-        runFile input @?= lines otput
+        runFile input @?= otput
     ]
