@@ -38,3 +38,5 @@ tests =
         otput <- readFile "./cases/20171A/out"
         runFile input @?= otput
     ]
+
+runTests = defaultMain tests
