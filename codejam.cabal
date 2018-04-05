@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: c7a1ff123a7f06821f0c17c42c4136455f192a7665d5e74a69d3382cbba2d062
+-- hash: 67d3f11899e95184ac30380266c4ceb228ee22f89e85017a7d51b97d586ab802
 
 name:           codejam
 version:        0.1.0.0
@@ -39,6 +39,7 @@ library
   exposed-modules:
       GCJ20171A
       GCJ20171BA
+      GCJ20171BB
       GCJ2017QA
       GCJ2017QB
       GCJ2017QC
