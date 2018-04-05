@@ -27,6 +27,7 @@ dependencies:
 - base >= 4.7 && < 5
 - split
 - array
+- tuple
 - containers
 - vector
 - tasty

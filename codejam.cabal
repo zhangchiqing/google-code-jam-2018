@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 07210fa73bfea6870bc3ebf2cf1db5dec8ebe87c35589ae92e71d743b014c362
+-- hash: 5c5d6e103cd8345f8bfaef1e691afadb106f174c12b3c4dae88ca5ee70c1298f
 
 name:           codejam
 version:        0.1.0.0
@@ -36,12 +36,12 @@ library
     , split
     , tasty
     , tasty-hunit
+    , tuple
     , vector
   exposed-modules:
       GCJ20171A
       GCJ20171BA
       GCJ20171BB
-      GCJ20171BBB
       GCJ2017QA
       GCJ2017QB
       GCJ2017QC
@@ -63,6 +63,7 @@ executable codejam-exe
     , split
     , tasty
     , tasty-hunit
+    , tuple
     , vector
   other-modules:
       Paths_codejam
@@ -83,6 +84,7 @@ test-suite codejam-test
     , split
     , tasty
     , tasty-hunit
+    , tuple
     , vector
   other-modules:
       Paths_codejam

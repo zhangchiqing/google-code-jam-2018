@@ -1,6 +1,7 @@
 module GCJ20171BB where
 
 import Data.List (find, foldl', partition, permutations, sortOn)
+import Data.Tuple.Curry (uncurryN)
 import Debug.Trace
 import Test.Tasty
 import Test.Tasty.HUnit
@@ -9,7 +10,7 @@ main :: IO ()
 main = interact runFile
 
 runFile :: String -> String
-runFile = unlines . zipWith format [1 ..] . map (uncurry7 solve) . parse
+runFile = unlines . zipWith format [1 ..] . map (uncurryN solve) . parse
 
 parse :: String -> [(Int, Int, Int, Int, Int, Int, Int)]
 parse = parse' . map read . tail . words
@@ -18,9 +19,8 @@ parse = parse' . map read . tail . words
     parse' (n:r:o:y:g:b:v:xs) = (n, r, o, y, g, b, v) : parse' xs
 
 -- try uncurryN
-uncurry7 :: (a -> b -> c -> d -> e -> f -> g -> h) -> (a, b, c, d, e, f, g) -> h
-uncurry7 f' (a, b, c, d, e, f, g) = f' a b c d e f g
-
+-- uncurry7 :: (a -> b -> c -> d -> e -> f -> g -> h) -> (a, b, c, d, e, f, g) -> h
+-- uncurry7 f' (a, b, c, d, e, f, g) = f' a b c d e f g
 format :: Int -> String -> String
 format x y = "Case #" ++ show x ++ ": " ++ y
 
@@ -47,7 +47,7 @@ buildWith (i, is) (j, js) (k, ks) =
 insertRemainingK :: Eq a => [a] -> [a] -> [a]
 insertRemainingK ijk [] = ijk
 insertRemainingK [] ks = ks
-insertRemainingK (i:jk:ijk) (k:ks) = i : jk : k : insertRemaining ijk ks
+insertRemainingK (i:jk:ijk) (k:ks) = i : jk : k : insertRemainingK ijk ks
 
 takeEach :: Eq a => [a] -> [a] -> [a]
 takeEach xs [] = xs
