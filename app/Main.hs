@@ -1,6 +1,6 @@
 module Main where
 
-import qualified GCJ20171BB as Q
+import qualified Hello as Q
 
 main :: IO ()
 main = Q.main

@@ -28,7 +28,44 @@ data L
   | O Int
   | G Int
   | V Int
+  | RG Int
+  | YV Int
+  | BO Int
   deriving (Show)
+
+parseSets ::
+     Int -> Int -> Int -> Int -> Int -> Int -> Int -> Maybe ([L], [L], [L])
+parseSets n r o y g b v
+  | n == b = Nothing
+  | n == r = Nothing
+  | n == y = Nothing
+  | n == o + b && o == b = Just ([BO b], [], [])
+  | n == g + r && g == r = Just ([RG r], [], [])
+  | n == v + y && v == y = Just ([YV y], [], [])
+  | otherwise = do
+    bs <- unsafeParseSet B b o
+    rs <- unsafeParseSet R r g
+    ys <- unsafeParseSet Y y v
+    return (bs, rs, ys)
+
+unsafeParseSet :: L -> Int -> Int -> Maybe [L]
+unsafeParseSet l first second
+  | l == R || l == Y || l == B = do
+    (first', second') <- parseAB first second
+    Just $ replicate l first' ++ [unsafeFromFirst l second']
+
+parseAB :: Int -> Int -> Maybe (Int, Int)
+parseAB first second
+  | second == 0 = Just (first, 0)
+  | first' < 0 = Nothing
+  | otherwise = Just (first', second)
+  where
+    first' = first - (second + 1)
+
+unsafeFromFirst :: L -> Int -> L
+unsafeFromFirst R second = G second
+unsafeFromFirst Y second = V second
+unsafeFromFirst B second = O second
 
 solve :: Int -> Int -> Int -> Int -> Int -> Int -> Int -> String
 solve n r o y g b v

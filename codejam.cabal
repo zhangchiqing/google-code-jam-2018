@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5c5d6e103cd8345f8bfaef1e691afadb106f174c12b3c4dae88ca5ee70c1298f
+-- hash: 3df3b1d8811a3c975e51cec64ab98859e07b8a034182ebfcdc75322d2c008c19
 
 name:           codejam
 version:        0.1.0.0
@@ -41,10 +41,10 @@ library
   exposed-modules:
       GCJ20171A
       GCJ20171BA
-      GCJ20171BB
       GCJ2017QA
       GCJ2017QB
       GCJ2017QC
+      Hello
   other-modules:
       Paths_codejam
   default-language: Haskell2010
