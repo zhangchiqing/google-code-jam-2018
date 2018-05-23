@@ -1,4 +1,17 @@
-# codejam
+# Google Code Jam 2018
+
+### Result
+
+| Problem | File | Small Dataset | Large Dataset |
+| --- | --- | --- | --- |
+| 2018 Qualification Round - A | GCJ2018QA.hs | Passed | Failed |
+| 2018 Qualification Round - A | GCJ2018QA2.hs | Passed | Passed |
+| 2018 Qualification Round - B | GCJ2018QB.hs | Passed | Failed |
+| 2018 Qualification Round - B | GCJ2018QB2.hs | Passed | Passed |
+| 2018 Qualification Round - D | GCJ2018QD.hs | Passed | Failed |
+| 2018 Qualification Round - D | GCJ2018QDD.hs | Passed | Passed |
+| 2018 Round 1A - A | GCJ2018R1A.hs | Passed | Passed |
+| 2018 Round 1A - B | GCJ2018R1B.hs | Passed | Passed |
 
 ### Install
 ```
